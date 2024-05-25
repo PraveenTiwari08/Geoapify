@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/geoap.css" />
+    <title>Geoapify</title>
+  </head>
+  <body>
+    <main>
+      <section style="position: relative" id="home">
+        <div class="home-container container py-5 px-3">
+          <header>
+            <h1 class="fw-bolder">TIME ZONE API</h1>
+            <h1 class="fw-bolder mt-4 mt-md-3">Your Current Time Zone</h1>
+          </header>
+          <div class="home-box">
+            <h2 class="loading" style="position: absolute; top: 45%">
+              Please wait, Getting info......
+            </h2>
+          </div>
+        </div>
+      </section>
+      <section id="result" class="text-bg-dark">
+        <div class="container py-5 px-3">
+          <header class="d-flex flex-column gap-3">
+            <h1>Enter Address</h1>
+            <input
+              id="input"
+              type="text"
+              placeholder="Address"
+              class="form-control border border-1 border-secondary"
+            />
+            <button
+              style="border-radius: 0"
+              id="submit-btn"
+              class="btn btn-light"
+            >
+              submit
+            </button>
+            <p style="font-size: 12px" class="error text-danger">
+              Please enter an address!
+            </p>
+          </header>
+          <div class="result-container">
+            <h1 class="mt-4">Your result</h1>
+            <div class="result-box"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./scripts/getData.js"></script>
+    <script src="./scripts/displayData.js"></script>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
